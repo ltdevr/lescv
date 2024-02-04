@@ -278,7 +278,10 @@ function closeNavigation() {
 }
 
 // Toggle menu click event
-toggleMenu.onmouseover = function() {
+// toggleMenu.onmouseover = function() {
+//     nav.classList.toggle('active');
+// };
+toggleMenu.onclick = function() {
     nav.classList.toggle('active');
 };
 
