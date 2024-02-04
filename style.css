@@ -642,6 +642,9 @@ footer {
     .header-text h1 {
         font-size: 70px;
     }
+    .header-text #am-a {
+        font-size: 30px;
+    }
 
     #about-me {
         padding-left: 0px;
