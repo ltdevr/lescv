@@ -10,6 +10,7 @@
 	<script src="/shared/third_party/popover/popover.iife.min.js" type="module"></script>
 	<link rel="stylesheet" href="style.css">
 	<!-- <link rel="stylesheet" href="/shared/creative.css"> -->
+	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <!-- 	<script src="script.js"></script> -->
 </head>
@@ -46,24 +47,20 @@
 				<span>Les'</span>
 				<span>Portfolio</span>
 			</h1>
+			<br> <span id="am-a"></span>
 		<!-- </div> -->
 		</div>
 	</div>
-	<!-- </div> -->
-	<!-- </div> -->
-
+	
 	<!---------- ABOUT ME ---------->
 	<div id="about-me">
-		<!-- <div class="about-hash">
-			<img src="style_imgs/hashtag-2.png">
-		</div> -->
 		<div class="container">
 			<div class="row">
 				<h1 class="sub-title">About Me</h1>
 				<p>Motivated IT professional with a strong foundation in cloud computing,
 					web development, and network security. Dedicated to optimizing system
 					performance, deploying innovate solutions, and staying current with industry
-					trends. Seeking opportunties as a<br> <span id="am-a"></span><br> to leverage expertise and drive
+					trends. Seeking opportunties as a Developer to leverage expertise and drive
 					success.<br>
 				</p>
 				<div class="tab-titles">
@@ -154,7 +151,7 @@
 				<div class="card__content">
 					<div>
 						<h2>Sticky Notes App</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>HTML, CSS, and Javascript</p>
 						<p><a href="#"><box-icon type='logo' name='github' class="logo"></box-icon></a></p>
 						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi dolore accusantium possimus autem impedit dolor, ea exercitationem delectus quas eius eos reiciendis dolorum quasi temporibus corrupti sit vel laborum magnam!</p> -->
 					</div>
@@ -181,7 +178,7 @@
 				<div class="card__content">
 					<div>
 						<h2>Python Contacts App</h2>
-						<p>Python, </p>
+						<p>Python and MySQL </p>
 						<p><a href="#"><box-icon type='logo' name='github' class="logo"></box-icon></a></p>
 					</div>
 					<figure>
@@ -194,7 +191,7 @@
 				<div class="card__content">
 					<div>
 						<h2>ToDo List</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p>HTML, CSS, and Javascript</p>
 						<p><a href="#"><box-icon type='logo' name='github' class="logo"></box-icon></a></p>
 					</div>
 					<figure>
@@ -210,7 +207,7 @@
 				<div class="card__content">
 					<div>
 						<h2>React Native ToDo App</h2>
-						<p>React Native, Expo,</p>
+						<p>React Native and Expo</p>
 						<p><a href="#"><box-icon type='logo' name='github' class="logo"></box-icon></a></p>
 					</div>
 					<figure>
@@ -226,7 +223,7 @@
 				<div class="card__content">
 					<div>
 						<h2>React Native Tik Tac Toe</h2>
-						<p>React Native, Expo, </p>
+						<p>React Native and Expo</p>
 						<p><a href="#"><box-icon type='logo' name='github' class="logo"></box-icon></a></p>
 					</div>
 					<figure>
@@ -240,9 +237,6 @@
 
 	<!---------- CONTACT ---------->
 	<div id="contact">
-		<div class="contact-at">
-			<img src="style_imgs/at_icon-2.png">
-		</div>
 		<div class="container">
 			<div class="row">
 				<div class="contact-left">
@@ -268,6 +262,7 @@
 </body>
 <!-- <script src="script.js"></script> -->
 
+	
 <!-- SCRIPT -->
 	
 <script>
@@ -323,6 +318,21 @@ var tablinks = document.getElementsByClassName("tab-links");
             document.getElementById(tabname).classList.add("active-tab");
         }
 
+// ABOUT ME TEXT
+var options = {
+    strings: ['Frontend Developer',
+        'Web Developer',
+        'Software Developer',
+        'Graphic Designer',
+        'Systems Administrator',
+        'IT Support Specialist'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+}
+var typed = new Typed("#am-a", options);
+	
 // VIDEOS
 let clips = document.querySelectorAll('.vid');
 
@@ -335,6 +345,24 @@ let clips = document.querySelectorAll('.vid');
             clip.pause();
         });
     });
+
+// CONTACT
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyD-MD6pV4Y95XsFCCk5p-4hqn4ae7tC54hQfWoS38Cu8C5wqG4qtmrIk4qMTEnxJk/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            msg.innerHTML = "Message Successfully Sent"
+            setTimeout(function () {
+                msg.innerHTML = ""
+            }, 3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+})
 
 </script>
 
