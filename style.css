@@ -5,6 +5,18 @@
     --card-margin: 4vw;
     --card-top-offset: 1em;
     --outline-width: 0px;
+    --neutral:#232946;
+    --base-blue:#5970e1ef;
+    --neutral-dark:#010310;
+    --base-100: #fffffe;
+    --neutral-focus: #121629;
+    --primary: #eebbc3;
+    --secordary: #b8c1ec;
+    --accent: #d4d8f0;
+    --success: #61b752;
+    --slight-dark: #100f0f;
+    --bright-blue: #0ef;
+    --dark: #080808;
 }
 
 * {
@@ -169,21 +181,12 @@ nav ul li a:hover {
     /* background-image: url('style_imgs/bg-code-1.png'); */
 }
 
-.code-bg img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* bottom: 0; */
-    width: 100%;
-    opacity: 0.7;
-    filter: blur(4px);
-    z-index: -1;
-    /* left: 30%; */
-}
-
 .header-text h1 {
     font-size: 120px;
     text-shadow: 2px 2px #000;
+}
+.header-text #am-a {
+    font-size: 40px;
 }
 
 /* ABOUT ME */
@@ -203,7 +206,7 @@ nav ul li a:hover {
 } */
 
 #about-me p span {
-    color: var(--bright-blue);
+/*     color: var(--bright-blue); */
     font-size: 20px;
 }
 
@@ -227,18 +230,18 @@ nav ul li a:hover {
     position: relative;
 }
 
-.tab-links:hover {
+/* .tab-links:hover {
     border-radius: 50px;
     border: 2.5px solid white;
     padding: 1%;
     transition: 0.5s;
-}
+} */
 
 .tab-links::after {
     content: '';
     width: 0;
     height: 3px;
-    background: var(--bright-blue);
+    background: white;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -255,7 +258,7 @@ nav ul li a:hover {
 }
 
 .tab-contents ul li span {
-    color: var(--bright-blue);
+/*     color: var(--bright-blue); */
     font-size: 20px;
 }
 
@@ -354,7 +357,6 @@ header {
     grid-template-rows: auto;
 
     align-items: stretch;
-    outline: var(--outline-width) solid blue;
 }
 
 .card__content>div {
@@ -444,33 +446,13 @@ header {
 
 /* ----------contact---------- */
 #contact {
-    background: var(--slight-dark);
     padding: 10%;
-    /* padding: 50px 0; */
-    /* padding-left: 90px;
-    padding-right: 10%; */
-    /* padding: 30px 0; */
 }
-
-.contact-at img {
-    position: absolute;
-    right: 2%;
-    width: 40%;
-    opacity: 0.6;
-    filter: blur(7px);
-}
-
-#contact h2 span {
-    color: var(--bright-blue);
-}
-
 .contact-left p {
     margin-top: 30px;
 }
 
 .contact-left p i {
-
-    color: var(--bright-blue);
     margin-left: 15px;
     font-size: 25px;
 }
@@ -488,7 +470,7 @@ header {
 }
 
 .btn:hover {
-    background: var(--bright-blue);
+    background: white;
     color: var(--dark);
 }
 
@@ -536,7 +518,7 @@ form .btn {
 
 footer {
     /* border-top: 3px solid var(--primary); */
-    border-top: 3px solid var(--bright-blue);
+    border-top: 3px solid white;
     color: white;
     /* color: var(--base-100); */
     font-size: 20px;
