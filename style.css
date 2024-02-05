@@ -17,6 +17,7 @@
     --slight-dark: #100f0f;
     --bright-blue: #0ef;
     --dark: #080808;
+    --success: rgb(73, 141, 27);
 }
 
 * {
@@ -500,7 +501,7 @@ form .btn {
 }
 
 #msg {
-    color: var(--bright-blue);
+    color: var(--success);
     margin-top: -40px;
     display: block;
     text-align: center;
