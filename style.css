@@ -723,7 +723,8 @@ footer {
 /*         height: 500px; */
         /* Change the height to the desired expanded size */
 /*         width: 150px; */
-	height: 100%;
+	height: 100vh;
+/* 	height: 100%; */
         width: 100%;
         border-radius: 0;
 /*         overflow: hidden; */
@@ -752,7 +753,7 @@ footer {
         /* transform: translateY(240px); */
         /* Adjust the translateY value to the expanded size */
 /*         transform: translateY(calc(220px - 1%)); */
-        transform: translateY(calc(420px - 100%));
+        transform: translateY(calc(50vh - 34px));
         /* transform: translateY(calc(100% - 60px));  */
         width: 30px;
         height: 30px;
