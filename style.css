@@ -37,11 +37,15 @@ body {
     background: rgb(217, 220, 221);
     /* background: rgb(200, 207, 209); */
     /* color: rgb(255, 255, 255); */
-
     font-size: calc(1em + 0.5vw);
-
 }
-
+body.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+body:not(.no-scroll) {
+    overflow: auto;
+}
 .navbar {
     padding: 15px;
 }
