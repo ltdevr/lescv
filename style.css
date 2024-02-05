@@ -647,6 +647,7 @@ footer {
     }
 
     #about-me {
+	padding-top: 30px;
         padding-left: 0px;
     }
 
@@ -654,7 +655,9 @@ footer {
         font-size: 16px;
         margin-right: 20px;
     }
-
+    #projects {
+        padding-top: 1px;
+    }
     #projects .sub-title {
         padding-left: 0px;
     }
@@ -685,8 +688,18 @@ footer {
 
     /* Other adjustments for smaller screens... */
 
+	.navbar{
+	    background: rgb(217, 220, 221);
+	    top: 0;
+	    position: fixed;
+	    width: 500px;
+	    left: 0;
+	    z-index: 10;
+	    padding-top: 21px;
+	}
     .nav {
-        position: relative;
+        position: fixed;
+	top: 0;
         width: 60px;
         height: 60px;
         background: #fff;
@@ -705,15 +718,22 @@ footer {
     }
 
     .nav.active {
-        height: 500px;
+/*         height: 500px; */
         /* Change the height to the desired expanded size */
-        width: 150px;
+/*         width: 150px; */
+	height: 100%;
+        width: 100%;
+        border-radius: 0;
+/*         overflow: hidden; */
+        left: 0;
     }
 
     .nav .toggleMenu {
         position: absolute;
-        width: 60px;
-        height: 60px;
+/*         width: 60px;
+        height: 60px; */
+        width: 35px;
+        height: 35px;
         background: #fff;
         border-radius: 50%;
         cursor: pointer;
@@ -729,7 +749,8 @@ footer {
         transition-delay: 0s;
         /* transform: translateY(240px); */
         /* Adjust the translateY value to the expanded size */
-        transform: translateY(calc(220px - 1%));
+/*         transform: translateY(calc(220px - 1%)); */
+        transform: translateY(calc(420px - 100%));
         /* transform: translateY(calc(100% - 60px));  */
         width: 30px;
         height: 30px;
