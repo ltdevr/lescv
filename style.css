@@ -752,8 +752,7 @@ footer {
     }
 
     .nav.active .toggleMenu {
-        background: red;
-/*         background: #131212; */
+        background: #131212;
         transition-delay: 0s;
         /* transform: translateY(240px); */
         /* Adjust the translateY value to the expanded size */
