@@ -367,6 +367,27 @@ form.addEventListener('submit', e => {
         .catch(error => console.error('Error!', error.message))
 })
 
+// DISABLE SCROLL WHEN NAVIGATION MENU IS ACTIVE
+var navbar = document.querySelector('.nav');
+
+// Function to add no-scroll class to body
+function disableScroll() {
+    document.body.classList.add('no-scroll');
+}
+
+// Function to remove no-scroll class from body
+function enableScroll() {
+    document.body.classList.remove('no-scroll');
+}
+
+// Add event listener to your navbar to disable scroll
+navbar.addEventListener('click', function() {
+    if (navbar.classList.contains('active')) {
+        disableScroll();
+    } else {
+        enableScroll();
+    }
+});
 </script>
 
 </html>
