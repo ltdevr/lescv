@@ -378,15 +378,18 @@ form.addEventListener('submit', e => {
 
 // DISABLE SCROLL WHEN NAVIGATION MENU IS ACTIVE
 var navbar = document.querySelector('.nav');
+var overlay = document.querySelector('.overlay');
 
 // Function to add no-scroll class to body
 function disableScroll() {
     document.body.classList.add('no-scroll');
+    overlay.style.display = 'block';	
 }
 
 // Function to remove no-scroll class from body
 function enableScroll() {
     document.body.classList.remove('no-scroll');
+    overlay.style.display = 'none';
 }
 
 // Add event listener to your navbar to disable scroll
