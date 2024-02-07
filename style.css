@@ -262,8 +262,8 @@ nav ul li a:hover {
 }
 
 .tab-contents ul li span {
-/*     color: var(--bright-blue); */
     font-size: 20px;
+    font-weight: bold;
 }
 
 .tab-contents {
