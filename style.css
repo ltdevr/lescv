@@ -348,6 +348,10 @@ nav ul li a:hover {
     --index: 10;
 }
 
+#card_11 {
+    --index: 11;
+}
+
 .card {
     position: sticky;
     top: 0;
